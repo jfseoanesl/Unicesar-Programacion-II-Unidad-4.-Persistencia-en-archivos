@@ -1,5 +1,6 @@
 package modelo;
 
+import datos.AObjeto;
 import datos.ATexto;
 import datos.IArchivoCrud;
 import entidades.Asignatura;
@@ -15,7 +16,8 @@ public class GestionAsignatura {
     private IArchivoCrud archivo;
 
     public GestionAsignatura() {
-        this.archivo = new ATexto();
+        //this.archivo = new ATexto();
+        this.archivo = new AObjeto();
     }
 
     public void adicionarAsignatura(Asignatura a) throws IOException {

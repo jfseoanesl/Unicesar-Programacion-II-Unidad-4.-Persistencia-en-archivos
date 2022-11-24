@@ -1,10 +1,12 @@
 package entidades;
 
+import java.io.Serializable;
+
 /**
  *
  * @author Jairo F
  */
-public class Asignatura {
+public class Asignatura implements Serializable {
     private String coodigo;
     private String nombre;
     private int creditos;

@@ -20,7 +20,7 @@ public class Main {
 
         GestionAsignatura modelo = new GestionAsignatura();
         try {
-            Scanner entrada = new Scanner(System.in);
+           Scanner entrada = new Scanner(System.in);
 //            System.out.print("codigo: ");
 //            String codigo = entrada.next();
 //            System.out.print("Nombre: ");
@@ -32,16 +32,16 @@ public class Main {
 //            boolean homologable = (val == 1) ? true : false;
 //            System.out.print("nota: ");
 //            double nota = entrada.nextDouble();
-
-            //Escribir en el archivo
-            //Asignatura asignatura = new Asignatura(codigo, nombre, credito, homologable, nota);
-            //modelo.adicionarAsignatura(asignatura);
-            
+//
+//            //Escribir en el archivo
+//            Asignatura asignatura = new Asignatura(codigo, nombre, credito, homologable, nota);
+//            modelo.adicionarAsignatura(asignatura);
+//            
             //leer del archivo
-//            ArrayList<Asignatura> leidas = modelo.leerAsignaturas();
-//            for(Asignatura a: leidas){
-//                System.out.println(a);
-//            }
+            ArrayList<Asignatura> leidas = modelo.leerAsignaturas();
+            for(Asignatura a: leidas){
+                System.out.println(a);
+            }
 
             // Busqueda de asignatura por codigo
             System.out.print("Codigo a buscar: ");
@@ -52,11 +52,12 @@ public class Main {
                 System.out.println(asignatura);
             }
             else{
+                System.out.println("");
                 System.out.println("La asignatura no esta registrada");
             }
             
-            Asignatura mayor = modelo.buscarByMayorNota();
-            System.out.println(mayor);
+//            Asignatura mayor = modelo.buscarByMayorNota();
+//            System.out.println(mayor);
             
         } catch (IOException ioe) {
             System.out.println("Excepcion: " + ioe);
